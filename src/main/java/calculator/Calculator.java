@@ -13,8 +13,14 @@ public class Calculator {
             result = numberQueue.poll();
         }
 
-        while (symbolQueue.peek() != null && numberQueue.peek() != null) {
-            result = calculate(result, symbolQueue.poll(), numberQueue.poll());
+        while (true) {
+            String symbol = symbolQueue.poll();
+            Integer target = numberQueue.poll();
+            if (symbol != null && target != null) {
+                result = calculate(result, symbol, target);
+                continue;
+            }
+            break;
         }
 
         return result;
