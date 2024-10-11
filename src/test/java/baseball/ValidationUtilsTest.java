@@ -1,6 +1,5 @@
 package baseball;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,5 +18,17 @@ public class ValidationUtilsTest {
         assertThat(ValidationUtils.validNo(1)).isTrue();
         assertThat(ValidationUtils.validNo(0)).isFalse();
         assertThat(ValidationUtils.validNo(10)).isFalse();
+    }
+
+    @Test
+    @DisplayName("야구_숫자_중복_검증")
+    void 야구_숫자_중복_검증() {
+        // given
+
+        // when
+
+        // then
+        assertThat(ValidationUtils.isDuplicate(1,2,3)).isTrue();
+        assertThat(ValidationUtils.isDuplicate(1,1,2)).isFalse();
     }
 }

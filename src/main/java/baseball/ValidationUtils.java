@@ -8,4 +8,8 @@ public class ValidationUtils {
     public static boolean validNo(int no) {
         return no > MIN_NO && no < MAX_NO;
     }
+
+    public static boolean isDuplicate(int no1, int no2, int no3) {
+        return no1 != no2 && no1 != no3 && no2 != no3;
+    }
 }
