@@ -31,4 +31,16 @@ public class ValidationUtilsTest {
         assertThat(ValidationUtils.isDuplicate(1,2,3)).isTrue();
         assertThat(ValidationUtils.isDuplicate(1,1,2)).isFalse();
     }
+
+    @Test
+    @DisplayName("야구_숫자_세자리_검증")
+    void 야구_숫자_세자리_검증() {
+        // given
+
+        // when
+
+        // then
+        assertThat(ValidationUtils.isThreePlace(123)).isTrue();
+        assertThat(ValidationUtils.isThreePlace(1)).isFalse();
+    }
 }
